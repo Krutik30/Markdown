@@ -19,6 +19,7 @@ function App() {
       <textarea 
         name='text' 
         id='text' 
+        cols={60}
         rows={10} 
         value={text} 
         className="textarea"
@@ -33,7 +34,7 @@ function App() {
 
 function Preview({markdown}){
   return (
-    <div dangerouslySetInnerHTML={{
+    <div className="box" dangerouslySetInnerHTML={{
       __html: marked(markdown , {renderer: renderer}),
     }} id="preview">
     </div>
